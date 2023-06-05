@@ -96,6 +96,14 @@ const userNameAndRollNumber: GenericArray<NameRollType> = [{
     name: 'Mr y',
     roll:  2
 }]
+const userNameAndRollNumber2: GenericArray<NameRollType> = [{
+    name: 'Mr z',
+    roll:  1
+},
+{
+    name: 'Mr u',
+    roll:  2
+}]
 
 
 
