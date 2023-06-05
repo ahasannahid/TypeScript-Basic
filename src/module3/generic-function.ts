@@ -36,3 +36,34 @@ const result8 = createArray2<string, string>('Bangladesh', 'I love BD')
 
 const result9 = createArray2<boolean, string[]>(true, ['USA'])
 const result10 = createArray2<boolean, Array<string>>(true, ['USA'])
+
+const result11 = createArray2<Name, boolean>({name: 'BD'}, false)
+
+
+// spread operator
+// const crush = 'Kate'
+// const myInfo = {
+//     name: 'Nahid',
+//     age: 25,
+//     salary: 500000
+// }
+// const newData = {...myInfo, crush}
+
+const addMeInMyCrushMine=<T>(myInfo:T)=> {
+    const crush = 'Kate';
+    const newData = {...myInfo, crush}
+    return  newData;
+}
+const myInfo = {
+    name: 'Nahid',
+    age: 25,
+    salary: 500000
+}
+const result12 = addMeInMyCrushMine(myInfo)
+
+
+// generic in normal function
+
+function createArray5<X, Y>(param1:X, param2:Y ):[X, Y]{
+    return [param1, param2];
+}
