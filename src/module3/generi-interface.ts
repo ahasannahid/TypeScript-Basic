@@ -108,3 +108,53 @@ const userNameAndRollNumber2: GenericArray<NameRollType> = [{
 
 
 // Generic Interface
+interface CrushIterface<T, U = null>{
+    name: string,
+    husband: T,
+    wife?: U
+}
+
+const crush1 : CrushIterface<boolean, undefined> = {
+    name: 'None',
+    husband : true
+}
+
+const crush3 : CrushIterface<object, null> = {
+    name: 'Kate',
+    husband : {
+        name: 'robi',
+        salary: 0.01
+    }
+}
+const crush4 : CrushIterface<{name: string, salary: number}, null> = {
+    name: 'Kate',
+    husband : {
+        name: 'robi',
+        salary: 0.01
+    }
+}
+
+interface HusbandInterface{name: string, salary: number}
+const crush5 : CrushIterface<HusbandInterface , string> = {
+    name: 'Kate',
+    husband : {
+        name: 'robi',
+        salary: 0.01
+    },
+    wife : 'ache'
+}
+
+
+
+interface PersonInterface{name: string, age: number}
+const crush6: CrushIterface<PersonInterface, {name:string, age: number}>={
+    name: 'kate',
+    husband: {
+        name: 'Nahid',
+        age: 25
+    },
+    wife: {
+        name: 'wings',
+        age: 40
+    }
+}
